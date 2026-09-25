@@ -1,0 +1,1319 @@
+/* =========================
+   BOOSTER IT2 - Premium Background
+========================= */
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    color:#fff;
+    overflow-x:hidden;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255,140,0,.18), transparent 25%),
+        radial-gradient(circle at 85% 25%, rgba(0,120,255,.18), transparent 30%),
+        linear-gradient(135deg,#050505,#07123f,#020814);
+    background-attachment:fixed;
+    position:relative;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size:55px 55px;
+    opacity:.55;
+}
+
+/* Animation */
+
+@keyframes glowMove{
+
+    from{
+        transform:translate(0,0) scale(1);
+    }
+
+    to{
+        transform:translate(-40px,-20px) scale(1.05);
+    }
+
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 35px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+.logo img{
+    width:100px;
+}
+.logo:hover{
+    transform:translateY(-6px); 
+    transition:.8s;
+}
+.navbar a{
+    color:#f4f4f5;
+    text-decoration:none;
+    font-weight:bold;
+    padding:10px 18px;
+    border-radius:30px;
+    transition:.3s;
+}
+.navbar a:hover{
+    background:#504d4d4f;
+    color:#f5d103;
+    transform:translateY(-8px); 
+}
+.navbar a.active{
+    background:#f8fc02;
+    color:rgb(5, 5, 5);
+}
+.brand-name{
+    flex:1;
+    margin-left:12px;
+}
+.brand-name h1{
+    width:auto;
+    color:#fefefe;
+    font-size:35px;
+}
+.hero{
+    position:relative;
+    min-height:520px;
+    aspect-ratio:16/9;
+    background:url("../images/banner.png") center top/contain no-repeat;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,140,0,.12), transparent 30%),
+        radial-gradient(circle at 80% 25%, rgba(0,170,255,.15), transparent 35%);
+}
+.whatsapp-btn{
+    background:#2ac22a;
+    color:rgb(246, 247, 246) !important;
+    padding:10px 18px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+.hero button{
+    position:absolute;
+    left:30px;
+    bottom:130px;
+    background:#0B26B9;
+    color:white;
+    border:3px solid white;
+    border-radius:50px;
+    padding:12px 22px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.hero button:hover{
+    background:#f6f6f7;
+    color:#091f8d;
+    border:3px solid#091f8d;
+    transform:translateY(-3px);
+}
+.hero-title{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow:
+        0 0 5px rgba(255,255,255,.8),
+        0 0 10px rgba(255,255,255,.7),
+        0 0 20px rgba(0,170,255,.7),
+        0 0 40px rgba(0,170,255,.5);
+}
+.orange-glow{
+    color:#FFA500;
+    text-shadow:
+        0 0 5px #FFD700,
+        0 0 10px #FFA500,
+        0 0 20px #FF8C00,
+        0 0 35px rgba(255,140,0,.7);
+}
+.blue-glow{
+    color:#EAF6FF;
+    text-shadow:
+        0 0 4px #fff,
+        0 0 8px #00BFFF,
+        0 0 18px #008CFF,
+        0 0 30px rgba(0,140,255,.8);
+}
+.neon-pulse{
+    animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse{
+    from{
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 10px #00BFFF,
+            0 0 20px #008CFF;
+    }
+    to{
+        text-shadow:
+            0 0 8px #eafa04,
+            0 0 18px #00E5FF,
+            0 0 35px #1E90FF,
+            0 0 60px #00E5FF;
+    }
+}
+/* PRODUCT SECTION */
+
+.products{
+    padding:25px 25px 70px;
+}
+.products h2{
+    text-align:center;
+    font-size:40px;
+    color:#f2f4f7;
+    margin-bottom:35px;
+    margin-top:-100px;
+}
+
+/* GRID */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+/* CARD */
+
+.product-card{
+    border:1px solid white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 22px rgba(0,0,0,.10);
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+}
+.product-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+        0 18px 40px rgb(32, 45, 116),
+        0 0 0 2px rgba(32, 33, 114, 0.959);
+}
+
+/* IMAGE */
+
+.product-card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    display:block;
+    margin-top:0;
+}
+
+/* OFFER */
+
+.offer{
+    position:absolute;
+    top:4px;
+    left:4px;
+    background:#e60023;
+    color:white;
+    padding:2px 6px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* CONTENT */
+
+.product-content{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+.product-content h3{
+    margin-bottom:8px;
+    color:#f8f6f6;
+    font-size:30px;
+}
+.product-content p{
+    color:#faf8f8;
+    line-height:1.5;
+    margin-bottom:15px;
+    font-size:15px;
+}
+
+/* PRICE */
+
+.price{
+    margin-top:auto;
+    margin-bottom:18px;
+}
+.old-price{
+    color:#999;
+    text-decoration:line-through;
+    margin-right:8px;
+}
+.new-price{
+    color:#cccfd4;
+    font-size:28px;
+    font-weight:bold;
+}
+
+/* BUTTON */
+
+.order-btn{
+    display:block;
+    text-align:center;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+.order-btn:hover{
+    background:#1da851;
+}
+
+/*Media Query*/
+/* TABLET */
+
+@media(max-width:992px){
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* Rating */
+
+.rating{
+    color:#f4b400;
+    font-size:18px;
+    margin-bottom:12px;
+}
+.rating span{
+    color:#666;
+    font-size:14px;
+}
+
+/* Best Seller */
+
+.best-seller{
+    position:absolute;
+    top:4px;
+    right:4px;
+    background:#F4C400;
+    color:#111;
+    padding:4px 6px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:bold;
+}
+
+/* Promo Slider */
+
+.promo-slider{
+    padding:60px 25px;
+}
+.promo-slider h2{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:25px;
+    color:#f2f3f5;
+    margin-top:-10px;
+}
+.slider{
+    width:650px;
+    max-width:90%;
+    margin:auto;
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(15,14,14,.12);
+}
+.slider-track{
+    display:flex;
+    transition:transform .8s ease-in-out;
+}
+.slide{
+    flex:0 0 100%;
+}
+.slide img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    display:block;
+}
+.why-us{
+padding:70px 25px;
+}
+.why-us h2{
+text-align:center;
+font-size:38px;
+margin-bottom:35px;
+color:#f2f3f7;
+margin-top:-50px;
+}
+.why-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+.why-card:hover{
+color:#4d4e4c;
+transform:translateY(-6px);
+transform:translateY(-8px);
+box-shadow:0 18px 40px rgb(160, 160, 163),
+           0 0 0 2px rgba(248, 248, 248, 0.993);
+}
+.stat:hover{
+color:#4d4e4c;
+transform:translateY(-6px);
+transform:translateY(-8px);
+transition:.3s;
+box-shadow:0 18px 40px rgb(140, 140, 146),
+           0 0 0 2px rgb(247, 247, 245);
+}
+.stat{
+color:#f3f5f5;
+padding:30px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;   
+}
+.why-card{
+color:#f5f6f7;
+border:1px solid white;
+padding:30px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+.why-icon{
+    font-size:42px;
+    color:#ececf0;
+    margin-bottom:15px;
+}
+.why-card:hover{
+transform:translateY(-6px);
+}
+.why-card h3{
+margin:15px 0 10px;
+color:#f5f6f8;
+}
+
+
+/* =========================
+   CUSTOMER REVIEW (NEW)
+========================= */
+
+
+.reviews{
+    padding:70px 25px;
+}
+
+.review-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.review-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#0408f1;
+    color:white;
+    padding:10px 20px;
+    border-radius:50px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.review-title h2{
+    font-size:42px;
+    color:#f4f5f7;
+    margin-bottom:12px;
+}
+
+.review-title p{
+    color:#f0ecec;
+    font-size:18px;
+}
+
+.review-slider{
+    position:relative;
+    max-width:1200px;
+    margin:auto;
+    overflow:hidden;
+}
+
+.review-track{
+    display:flex;
+    gap:20px;
+    transition:transform .6s ease;
+}
+
+/* ===== Customer Review Text Fix ===== */
+
+.review-card{
+    background: rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    gap:12px;
+    height:auto;
+    overflow:visible;
+}
+
+.review-card p{
+    display:block;
+    color:#ffffff;
+    font-size:15px;
+    line-height:1.6;
+    margin:0;
+    opacity:1;
+    visibility:visible;
+    white-space:normal;
+}
+.review-card .stars{
+    color:#FFD700;
+}
+
+.review-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.review-profile{
+    position:relative;
+    width:78px;
+    height:78px;
+    flex-shrink:0;
+}
+
+.review-img{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #ecca06;
+}
+
+.review-side-img{
+    width:156px;
+    height:125px;
+    object-fit:contain;
+    object-position:top;
+    background:white;
+    border-radius:14px;
+    border:2px solid #e5e7eb;
+    padding:4px;
+}
+
+.review-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#012686;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    z-index:10;
+}
+
+.review-btn:hover{
+    background:#001d63;
+}
+
+.prev{
+    left:8px;
+}
+
+.next{
+    right:8px;
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+    .review-card{
+        flex:0 0 calc((100% - 20px)/2);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+    .review-card{
+        flex:0 0 90%;
+    }
+
+    .review-side-img{
+        width:80px;
+        height:120px;
+    }
+}
+/* Verified Badge */
+
+.verified-badge{
+    position:absolute;
+    bottom:8px;
+    right:8px;
+    width:24px;
+    height:24px;
+    background:#1877F2;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:2px solid white;
+    font-size:18px;
+}
+/* ===== Premium Review Hover Effect ===== */
+
+.review-card{
+    transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.review-card:hover{
+color:#4d4e4c;
+transform:translateY(-6px);
+transform:translateY(-8px);
+transition:.3s;
+box-shadow:0 18px 40px rgb(140, 140, 146),
+           0 0 0 2px rgb(247, 247, 245);
+}
+
+/* Profile Picture Glow */
+
+.review-profile{
+    transition:transform .35s ease;
+}
+
+.review-card:hover .review-profile{
+    transform:scale(1.08);
+}
+
+.review-card:hover .review-img{
+    box-shadow:0 0 18px rgba(24,119,242,.55);
+}
+
+/* Messenger Screenshot Zoom */
+
+.review-side-img{
+    transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.review-card:hover .review-side-img{
+    transform:scale(1.06);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* Verified Badge Animation */
+
+.review-card:hover .verified-badge{
+    transform:scale(1.12);
+}
+
+/* Review Button */
+
+.review-btn{
+    transition:all .3s ease;
+}
+
+.review-btn:hover{
+    transform:translateY(-50%) scale(1.1);
+    background:#0B26B9;
+}
+.review-card h4{
+    color:#eff0f3;
+    margin-bottom:6px;
+}
+.stars{
+    color:#F4C400;
+    font-size:18px;
+    margin-bottom:12px;
+}
+.stars span{
+    color:#6d6969;
+    font-size:14px;
+}
+.contact{
+color:white;
+padding:70px 25px;
+text-align:center;
+}
+.contact h2{
+font-size:38px;
+margin-bottom:15px;
+}
+.contact-box{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+.contact-box a{
+background:white;
+color:#0B26B9;
+padding:14px 22px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+.contact-box a:hover{
+transform:translateY(-4px);
+}
+
+/* =======================
+        FOOTER
+======================= */
+
+.footer{
+    background: #0c0c0c21;
+    color:white;
+    padding:60px 25px 20px;
+    margin-top:60px;
+}
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+.footer-brand img{
+    width:80px;
+    margin-bottom:15px;
+}
+.footer-brand h3{
+    color:#f7f6f4;
+    margin-bottom:10px;
+    font-size:30px;
+}
+.footer-brand p{
+    line-height:1.7;
+    color:#ddd;
+}
+.footer-contact h4{
+    color:#fcfcfb;
+    margin-bottom:18px;
+}
+.footer-links a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:12px;
+    transition:.3s;
+}
+.footer-links a:hover{
+    color:#F4C400;
+    transform:translateX(6px);
+}
+.footer-contact p{
+    margin-bottom:12px;
+    color:#ddd;
+}
+.footer-social{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin:35px 0 20px;
+}
+.footer-social img{
+    width:42px;
+    height:42px;
+    transition:.3s;
+}
+.footer-social img:hover{
+    transform:scale(1.15);
+}
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.2);
+    text-align:center;
+    padding-top:20px;
+    color:#bbb;
+}
+
+/* =========================
+   FLOATING WHATSAPP BUTTON
+========================= */
+
+.floating-whatsapp{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background: #26d60f;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 8px 25px rgb(34, 219, 10);
+
+    z-index:9999;
+
+    animation:whatsappPulse 2s infinite;
+
+    transition:.3s;
+
+}
+.floating-whatsapp img{
+
+    width:100%;
+
+    height:100%;
+
+}
+.floating-whatsapp:hover{
+
+    transform:scale(1.12);
+}
+
+/* Pulse Animation */
+@keyframes whatsappPulse{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgb(38, 180, 28);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 18px rgba(37,211,102,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+
+    }
+}
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+max-width:900px;
+margin:40px auto;
+text-align:center;
+gap:25px;
+}
+.stat{
+padding:25px;
+border:1px solid white;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+.stat h3{
+font-size:42px;
+color:#f6f7f8;
+}
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:all .8s ease;
+}
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Hamburger */
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:28px;
+    color:#fafbfc;
+    cursor:pointer;
+}
+
+/* =======================
+    MOBILE RESPONSIVE      
+======================= */
+
+@media(max-width:768px){
+
+  .navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 16px;
+    min-height:70px;
+    flex-wrap:nowrap;
+  }
+
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex:1;
+    min-width:0;
+  }
+
+  .logo img{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    flex-shrink:0;
+  }
+.navbar nav{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#07123f;
+    flex-direction:column;
+    padding:15px 0;
+    z-index:999;
+}
+
+.navbar nav.active{
+    display:flex;
+}
+
+  /* মোবাইলে Header-এর WhatsApp লুকিয়ে থাকবে */
+  .whatsapp-btn{
+    display:none;
+  }
+
+  .menu-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    font-size:24px;
+  }
+.footer p{
+    font-size:11px;
+}
+.contact h2{
+       font-size:16px; 
+    }
+.contact p{
+       font-size:12px; 
+    }
+
+.hero{
+        height:auto;
+        min-height:210px;
+        aspect-ratio:16/9;
+        background-position:center top;
+        background-size:contain;
+        background-repeat:no-repeat;
+        background-color:#35799b5e;
+    }
+
+.why-grid{
+grid-template-columns:repeat(2,1fr);
+}
+.whatsapp-btn{
+        order:99;
+    }
+.hero button{
+    left:15px;
+    bottom:15px;
+    padding:8px 14px;
+    font-size:13px;
+}
+.offer-badge{
+    top:15px;
+    left:15px;
+    padding:6px 12px;
+    font-size:11px;
+    border-width:2px;
+}
+.products h2{
+    text-align:center;
+    font-size:40px;
+    color:#f2f4f7;
+    margin-bottom:35px;
+    margin-top:10px;
+}
+.products h2{
+    font-size:24px;
+    white-space:nowrap;
+}
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    gap:12px;
+    padding:0 12px;
+  }
+.product-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    width:100%;
+    margin:0;
+    border-radius:18px;
+    overflow:hidden;
+  }
+  .product-card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+  }
+  .product-content{
+    display:grid;
+    grid-template-rows:36px 22px 40px 28px auto;
+    flex:1;
+    padding:12px;
+    gap:8px;
+  }
+
+  /* Title */
+  .product-content h3{
+    margin:0;
+    font-size:14px;
+    line-height:1.3;
+    display:flex;
+    align-items:center;
+  }
+
+  /* Rating */
+  .rating{
+    margin:0px;
+    display:flex;
+    align-items:center;
+    font-size:11px;
+  }
+
+  .rating span{
+    font-size:11px;
+  }
+
+  /* Description */
+  .product-content p{
+    margin:0;
+    font-size:12px;
+    line-height:1.4;
+  }
+
+  /* Price */
+  .price{
+    margin:0;
+    display:flex;
+    align-items:center;
+    gap:4px;
+  }
+
+  .new-price{
+    font-size:18px;
+  }
+  .old-price{
+    font-size:12px;
+  }
+
+  /* WhatsApp Button */
+  .order-btn{
+    align-self:center;
+    margin-top:auto;
+    padding:10px 6px;
+    font-size:12px;
+    text-align:center;
+  }
+.product-content h3{
+    font-size:24px;
+}
+.product-content p{
+    font-size:16px;
+}
+.promo-slider h2{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:25px;
+    color:#f2f3f5;
+    margin-top:-50px;
+}
+.footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+.footer-brand img{
+    margin:auto auto 15px;
+}
+.footer-social img{
+    width:36px;
+    height:36px;
+}
+.footer-brand h3{
+    font-size:26px;
+}
+.payment-icons img{
+    width:45px;
+}
+.stats{
+grid-template-columns:1fr;
+}
+.floating-whatsapp{
+
+    width:55px;
+
+    height:55px;
+
+    right:15px;
+
+    bottom:15px;
+
+}
+.floating-whatsapp img{
+
+    width:30px;
+
+    height:30px;
+
+}
+html{
+    scroll-behavior:smooth;
+}
+ .brand-name{
+    flex:1;
+    min-width:0;
+    margin-left:8px;
+  }
+
+  .brand-name h1{
+    font-size:18px;
+    line-height:1;
+    margin:0;
+    white-space:nowrap;   /* দুই লাইনে যাবে না */
+  }
+
+  .logo img{
+    width:36px;
+    height:36px;
+  }
+
+  .menu-toggle{
+    margin-left:10px;
+    flex-shrink:0;
+  }
+  .review-title h2{
+    font-size:16px;
+    color:#f3f4f7;
+    margin-bottom:12px;
+}
+.review-title p{
+    color:#fafafa;
+    font-size:11px;
+}
+.review-slider{
+    position:relative;
+    max-width:300px;
+    margin:auto;
+    overflow:hidden;
+    padding-right:50px;
+}
+.review-side-img{
+    width:200px;
+    height:100px;
+    object-fit:contain;
+    object-position:top;
+    background:white;
+    border-radius:14px;
+    border:2px solid #e5e7eb;
+    padding:4px;
+}
+
+.review-track{
+    display:flex;
+    gap:20px;
+   
+}
+}
+/* =======================
+    Payment Section      
+======================= */
+.payment-section{
+    text-align:center;
+    margin:25px 0;
+}
+.payment-section h4{
+    color:#f8f8f6;
+    margin-bottom:15px;
+    font-size:20px;
+}
+.payment-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+.payment-icons img{
+    width:25px;
+    height:auto;
+    background:white;
+    padding:8px;
+    border-radius:12px;
+    transition:.3s;
+}
+.payment-icons img:hover{
+    transform:translateY(-4px) scale(1.08);
+}
+
+
+
+/* ===== Mobile 2 Product Cards (V7) ===== */
+@media (max-width:768px){
+
+
+.offer{
+    position:absolute;
+    top:4px;
+    left:6px;
+    background:#e60023;
+    color:white;
+    padding:1px 6px;
+    border-radius:20px;
+    font-size:8px;
+    font-weight:bold;
+}
+
+.best-seller{
+    position:absolute;
+    top:2px;
+    right:10px;
+    background:#F4C400;
+    color:#111;
+    padding:4px 6px;
+    border-radius:20px;
+    font-size:8px;
+    font-weight:bold;
+}
+  .product-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:12px;
+    padding:0 12px;
+  }
+
+  .product-card{
+    width:100%;
+    min-width:0;
+    margin:0;
+    border-radius:18px;
+    overflow:hidden;
+    box-sizing:border-box;
+  }
+
+  .product-card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    display:block;
+  }
+
+  .product-card h3{
+    font-size:14px;
+    line-height:1.3;
+    min-height:36px;
+  }
+.product-card p{
+    font-size:10px;
+}
+  .product-card ul li{
+    font-size:11px;
+    line-height:1.4;
+  }
+
+  .product-card .price{
+    font-size:16px;
+  }
+
+  .product-card .old-price{
+    font-size:12px;
+  }
+
+  .product-card .order-btn{
+    width:100%;
+    font-size:12px;
+    padding:10px 6px;
+  }
+
+  /* Badge ছোট হবে */
+  .product-card .badge,
+  .product-card .offer-badge{
+    font-size:10px;
+    padding:4px 8px;
+  }
+  .product-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+
+  .product-content{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+  }
+
+  .price{
+    margin-top:12px;
+    margin-bottom:10px;
+  }
+
+  .order-btn{
+    margin-top:auto;   /* সব বাটন একই লাইনে থাকবে */
+    width:100%;
+  }
+}
