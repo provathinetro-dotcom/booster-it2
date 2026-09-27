@@ -25,7 +25,7 @@ fbq('init', '2253909068709614');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2253909068709614&ev=PageView&noscript=1"
+ssrc="https://www.facebook.com/tr?id=2253909068709614&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <meta name="robots" content="index, follow">
@@ -478,7 +478,19 @@ class="order-btn">
 
 <script src="js/script.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const whatsappButtons = document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+
+  whatsappButtons.forEach(function(button){
+    button.addEventListener("click", function(){
+      fbq('track', 'Contact');
+    });
+  });
+
+});
+</script>
 
 </body>
 </html>
